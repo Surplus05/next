@@ -1,0 +1,113 @@
+.box {
+  box-sizing: border-box;
+  padding: 0 10px 10px 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.list {
+  background: #fff;
+  border-radius: 6px;
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  font-size: 48px;
+}
+
+.routine {
+  cursor: pointer;
+  border: 1px solid #c0c0c0;
+  margin: 10px;
+  height: 120px;
+  border-radius: 6px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border: 1px solid #c0c0c0;
+  border-radius: 6px;
+  height: calc(100% - 60px);
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0 2px 8px var(--black) 50%;
+}
+
+.routineTitle {
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+
+  input {
+    margin: 10px 0;
+    font-size: 28px;
+    border: none;
+    outline: none;
+  }
+}
+
+.exerciseBox {
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  width: 65%;
+}
+
+.set {
+  width: 30%;
+}
+
+.formButton {
+  margin: 10px;
+  width: calc(100% - 20px);
+  justify-content: center;
+}
+
+.exercise {
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    margin: 6px;
+  }
+
+  .exercise {
+    margin: 6px;
+    font-size: 20px;
+  }
+
+  .formButton {
+    margin: 6px;
+    width: calc(100% - 12px);
+  }
+
+  .form {
+    margin: 6px;
+    input {
+      font-size: 18px;
+    }
+  }
+  .exerciseBox {
+    width: calc(100% - 12px);
+  }
+}

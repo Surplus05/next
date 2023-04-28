@@ -1,0 +1,138 @@
+.background {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #4d4d4d80;
+  width: 100vw;
+  height: 100vh;
+  min-height: 450px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  transition: 0.3s;
+}
+
+.modalInner {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  max-height: 420px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f9fafb;
+  box-shadow: rgb(0 0 0 / 10%) 0px -1px 0px 0px inset;
+}
+
+.loginModal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.close {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .left,
+  .right {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: var(--black);
+  }
+
+  .left {
+    transform: rotate(45deg);
+  }
+  .right {
+    transform: rotate(-45deg);
+  }
+}
+
+.text {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto auto 55px;
+}
+
+.social {
+  margin: 0 auto auto auto;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0.5;
+
+  .iconBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    padding: 25px;
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    margin: auto 55px;
+  }
+
+  .social {
+    flex-direction: column;
+    width: 100vw;
+
+    .iconBox {
+      padding: 0 0 0 25px;
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      margin: 5px;
+    }
+  }
+
+  .loginModal {
+    max-height: inherit;
+  }
+  .modalInner {
+    max-width: none;
+    max-height: none;
+    height: 100%;
+    border-radius: 0;
+  }
+  .sns {
+    font-weight: bold;
+    margin-left: 25px;
+    font-size: 24px;
+    user-select: none;
+  }
+}
